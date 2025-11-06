@@ -1,0 +1,38 @@
+<%- include("templates/header.ejs") %>
+
+<h1 class="text-primary">Contáctanos</h1>
+
+<% if (mensaje) { %>
+  <div class="alert alert-info"><%= mensaje %></div>
+<% } %>
+
+<form method="POST" action="/contacto" class="mt-4">
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="nombre" 
+      name="nombre" 
+      placeholder="Escribe tu nombre" 
+      required>
+  </div>
+
+  <div class="mb-3">
+    <label for="edad" class="form-label">Edad:</label>
+    <input 
+      type="number" 
+      class="form-control" 
+      id="edad" 
+      name="edad" 
+      placeholder="Ingresa tu edad">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+<p class="mt-4">
+  Si deseas comunicarte con nosotros, completa el formulario y te responderemos pronto.
+</p>
+
+<%- include("templates/footer.ejs") %>

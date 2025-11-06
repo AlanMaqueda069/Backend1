@@ -1,0 +1,40 @@
+<%- include("templates/header.ejs") %>
+    <h1 class="text-primary">Inicio</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo, aliquid distinctio est vero blanditiis esse doloremque at nostrum iure aliquam suscipit. Magni deserunt id, eligendi exercitationem error voluptatibus alias.</p>
+
+<%
+		var a = 5
+		var b = 10
+		var c = a + b
+		var texto = "Hola es el valor de una variable"
+	%>
+	<%= "La suma de a + b es: " + c %>
+	<a href="/info/<%=c %>/<%= texto %>">Enviar datos</a>
+
+	<ul>
+		<% artistas.forEach((artista) => { %>
+			<li><%= artista %></li>
+		<% }); %>
+	</ul>
+
+	<!--Tabla-->
+	<div class="container my-4 card shadow-lg w-50 mx-auto " >
+		<table class="table ">
+		<thead class="table-dark">
+			<tr>
+				<th>Artistas</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% artistas.forEach((artista) => { %>
+				<tr>
+					<td><%= artista %></td>
+				</tr>
+			<% }); %>
+		</tbody>
+
+	</table>
+	</div>
+	
+
+<%- include("templates/footer.ejs") %>
